@@ -23,15 +23,42 @@ const onSubmit = (data: User) => {
 };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <input type="email" {...register("email")} placeholder="email" />
-      {errors.email && <p>{errors.email.message}</p>}
+<form
+  onSubmit={handleSubmit(onSubmit)}
+  className="flex flex-col gap-4 bg-white p-6 rounded-xl shadow-md w-full max-w-sm mx-auto"
+>
+  <div className="flex flex-col">
+    <input
+      type="email"
+      {...register("email")}
+      placeholder="Email"
+      className="border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+    />
+    {errors.email && (
+      <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
+    )}
+  </div>
 
-      <input type="password" {...register("password")} placeholder="password" />
-      {errors.password && <p>{errors.password.message}</p>}
+  <div className="flex flex-col">
+    <input
+      type="password"
+      {...register("password")}
+      placeholder="Password"
+      className="border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+    />
+    {errors.password && (
+      <p className="text-red-500 text-sm mt-1">{errors.password.message}</p>
+    )}
+  </div>
 
-      <button type="submit" disabled={isSubmitting}>Login</button>
-    </form>
+  <button
+    type="submit"
+    disabled={isSubmitting}
+    className="bg-blue-500 text-black py-2 rounded-lg hover:bg-blue-600 transition disabled:opacity-50"
+  >
+    Login
+  </button>
+</form>
   );
 };
 

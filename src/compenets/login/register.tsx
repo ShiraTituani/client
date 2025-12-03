@@ -22,14 +22,14 @@ const RegisterPage = () => {
     }
   };
 
-  return (
-    <div className="container">
-      <h3>New User</h3>
-      <CreateUser onCreate={handleCreateUser} />
+return (
+  <div className="max-w-md mx-auto mt-10 bg-white p-8 rounded-xl shadow-md">
+    <h3 className="text-2xl font-bold mb-4 text-center">New User</h3>
 
-      
-    </div>
-  );
+    <CreateUser onCreate={handleCreateUser} />
+  </div>
+);
+
 };
 
 export default RegisterPage;

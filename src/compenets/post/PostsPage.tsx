@@ -52,24 +52,50 @@ const filteredPosts = posts.filter(post =>
 );
 
 return (
-  <div className="container">
-    
+  
+     <div className="container mx-auto p-6">
+
+    <h1 className="text-3xl font-bold text-center mb-6">Posts</h1>
 
     <SearchBar 
       value={search}
       onChange={(value) => setSearch(value)}
     />
-<h3>Create Post</h3>
-    <CreatePostForm onCreate={handleCreatePost} />
 
-    {filteredPosts.map((post, index) => (
-      <div className="post" key={index}>
-        <h4>{post.title}</h4>
-        <p>{post.content}</p>
-        <small>{post.tag}</small>
-        <button onClick={() => handleDelete(post._id)}>Delete</button>
+  
+    <div className="flex gap-6 mt-6">
+
+      
+      <div className="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {filteredPosts.map((post) => (
+          <div
+            key={post._id}
+            className="bg-gray-100 p-4 rounded-xl shadow-md hover:shadow-lg transition"
+          >
+            <h4 className="text-xl font-bold text-gray-800">{post.title}</h4>
+
+            <p className="text-gray-700 mt-2">{post.content}</p>
+
+            <span className="inline-block mt-3 text-sm text-blue-600 font-semibold">
+              #{post.tag}
+            </span>
+
+            <button
+              onClick={() => handleDelete(post._id)}
+              className="mt-4 bg-red-500 text-black px-3 py-1 rounded-md hover:bg-red-600 transition"
+            >
+              Delete
+            </button>
+          </div>
+        ))}
       </div>
-    ))}
+
+     
+      <div className="w-80">
+        <CreatePostForm onCreate={handleCreatePost} />
+      </div>
+
+    </div>
   </div>
 );
 

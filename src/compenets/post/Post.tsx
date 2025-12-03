@@ -1,3 +1,4 @@
+
 type PostProps = {
   title: string;
   content: string;

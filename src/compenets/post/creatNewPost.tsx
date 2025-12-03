@@ -17,18 +17,46 @@ const CreatePostForm = ({ onCreate }: CreatePostFormProps) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-     <p></p>
-      <input value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Title" />
-       <p></p>
-      
-       <p></p>
-      <textarea value={content} onChange={(e) => setContent(e.target.value)} placeholder="Content" />
-         <p></p>
-      <input value={tag} onChange={(e) => setTag(e.target.value)} placeholder="Tag" />
-       <p></p>
-      <button type="submit">Create Post</button>
-    </form>
+ <form
+    onSubmit={handleSubmit}
+    className="max-w-md bg-white p-6 border rounded-lg shadow space-y-4"
+  >
+    <p></p>
+
+    <input
+      value={title}
+      onChange={(e) => setTitle(e.target.value)}
+      placeholder="Title"
+      className="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+    />
+
+    <p></p>
+
+    <textarea
+      value={content}
+      onChange={(e) => setContent(e.target.value)}
+      placeholder="Content"
+      className="w-full p-2 h-28 border rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-blue-400"
+    />
+
+    <p></p>
+
+    <input
+      value={tag}
+      onChange={(e) => setTag(e.target.value)}
+      placeholder="Tag"
+      className="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+    />
+
+    <p></p>
+
+    <button
+      type="submit"
+      className="w-full bg-green-600 text- black py-2 rounded-lg hover:bg-green-700"
+    >
+      Create Post
+    </button>
+  </form>
   );
 };
 
