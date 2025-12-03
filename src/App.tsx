@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import RegisterPage from "./compenets/register";
-import LoginPage from "./compenets/login";
-import PostPage from "./compenets/PostsPage";
+import RegisterPage from "./compenets/login/register";
+import LoginPage from "./compenets/login/login";
+import PostPage from "./compenets/post/PostsPage";
 import "./App.css";
 
 const App = () => {

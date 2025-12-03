@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import CreatePostForm from "./creatNewPost";
 import axios from "axios";
-import type { PostProps } from "../types";
-import SearchBar from "./SearchBar";
+import type { PostProps } from "../../types";
+import SearchBar from "../filters/SearchBar";
 const PostPage = () => {
 const [posts, setPosts] = useState<PostProps[]>([]);
 const [search, setSearch] = useState("");

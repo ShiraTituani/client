@@ -1,5 +1,5 @@
 import { useState } from "react";
-import  type { PostProps } from "../types";
+import  type { PostProps } from "../../types";
 
 type CreatePostFormProps = {
   onCreate: (post: PostProps) => void;

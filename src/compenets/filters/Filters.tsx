@@ -1,7 +1,7 @@
 import Select from "react-select";
 import makeAnimated from "react-select/animated";
 
-import type { TagOption } from "../types";
+import type { TagOption } from "../../types";
 
 const animatedComponents = makeAnimated();
 

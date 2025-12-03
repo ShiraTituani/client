@@ -1,5 +1,5 @@
 import axios from "axios";
-import type { UserProps } from "../types";
+import type { UserProps } from "../../types";
 import { useNavigate } from "react-router-dom";
 import CreateUser from "./creatNewUse";
 

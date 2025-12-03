@@ -1,5 +1,5 @@
 import { useState } from "react";
-import  type {UserProps} from "../types";
+import  type {UserProps} from "../../types";
 
 type CreatUserProps = {
   onCreate: (post: UserProps) => void;
